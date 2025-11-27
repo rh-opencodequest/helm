@@ -1,0 +1,19 @@
+# Default values for keycloak-config-job
+# Cluster name - change this to configure different clusters
+# Options: atlantis, central, gotham, madripoor, metropolis, wakanda
+cluster: atlantis
+
+namespace: rhsso
+
+image:
+  repository: quay.io/agnosticd/ee-multicloud
+  tag: latest
+
+keycloak:
+  namespace: rhsso
+  realm: openshift
+
+gitops:
+  repoUrl: "https://github.com/rh-trucathon/gitops.git"
+  branch: "main"
+

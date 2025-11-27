@@ -1,0 +1,11 @@
+# Default values for acs-config-job
+namespace: stackrox
+
+image:
+  repository: quay.io/agnosticd/ee-multicloud
+  tag: latest
+
+gitops:
+  repoUrl: "https://github.com/rh-trucathon/gitops.git"
+  branch: "main"
+

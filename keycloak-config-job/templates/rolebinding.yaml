@@ -1,0 +1,15 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: keycloak-config-job-runner
+  namespace: {{ .Values.keycloak.namespace }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: keycloak-config-job-runner
+subjects:
+- kind: ServiceAccount
+  name: keycloak-config-job-runner
+  namespace: {{ .Values.namespace }}
+

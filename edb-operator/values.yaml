@@ -1,0 +1,8 @@
+# Default values for edb-operator
+subscription:
+  name: cloud-native-postgresql
+  namespace: openshift-operators
+  channel: stable-v1.27
+  source: certified-operators
+  sourceNamespace: openshift-marketplace
+
