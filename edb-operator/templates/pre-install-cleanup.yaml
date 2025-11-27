@@ -56,10 +56,10 @@ metadata:
     "helm.sh/hook": pre-install,pre-upgrade
     "helm.sh/hook-weight": "-5"
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
-    "argocd.argoproj.io/hook": PreSync
-    "argocd.argoproj.io/hook-delete-policy": HookSucceeded
 spec:
+  activeDeadlineSeconds: 30
   ttlSecondsAfterFinished: 0
+  backoffLimit: 1
   template:
     spec:
       serviceAccountName: {{ .Values.subscription.name }}-cleanup
