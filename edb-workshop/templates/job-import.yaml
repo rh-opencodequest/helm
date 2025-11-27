@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: import-job
+  namespace: {{ .Values.namespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "3"
 spec:
@@ -16,7 +17,7 @@ spec:
           - |
             set -x
             sh /scripts/import.sh
-        image: {{ .Values.image }}
+        image: {{ .Values.images }}
         volumeMounts:
           - mountPath: /scripts
             name: importsql-sh
