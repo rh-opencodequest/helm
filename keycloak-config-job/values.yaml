@@ -11,7 +11,7 @@ image:
 
 keycloak:
   namespace: rhsso
-  realm: backstage
+  realm: openshift
 
 gitops:
   repoUrl: "https://github.com/rh-opencodequest/gitops.git"
