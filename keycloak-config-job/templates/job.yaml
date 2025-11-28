@@ -50,4 +50,5 @@ spec:
           items:
           - key: playbook.yaml
             path: playbook.yaml
-
+          - key: opencodequest.yaml
+            path: vars/opencodequest.yaml
