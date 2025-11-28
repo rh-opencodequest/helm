@@ -290,7 +290,7 @@ data:
             replace: 'gitlab-gitlab.{{ "{{" }} domain_name {{ "}}" }}'
             backup: no
           loop:
-            - "{{ "{{" }} repo_local_path {{ "}}" }}/scaffolder-templates/opencodequest-templates.yaml
+            - "{{ "{{" }} repo_local_path {{ "}}" }}/scaffolder-templates/opencodequest-templates.yaml"
 
         - name: Update domain_name with GitLab FQDN in templates
           ansible.builtin.replace:
