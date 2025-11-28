@@ -25,16 +25,12 @@ spec:
             set -e
             set -x
             
-            # Clone the gitops repo to get playbooks and vars
-            echo "Cloning gitops repository..."
-            git clone --depth 1 --branch ${GITOPS_BRANCH:-main} ${GITOPS_REPO_URL} /tmp/gitops || true
-            
             # Change to the ansible directory
-            cd /tmp/gitops/ansible
+            cd /tmp/ansible
             
             # Run the ansible playbook
             echo "Running ansible playbook for cluster: ${CLUSTER}"
-            ansible-playbook -i localhost playbook-configure-rhdh.yaml \
+            ansible-playbook -i localhost playbook.yaml \
               -e cluster=${CLUSTER} \
               -e gitlab_namespace=${GITLAB_NAMESPACE:-gitlab}
             
@@ -42,4 +38,15 @@ spec:
         envFrom:
         - configMapRef:
             name: rhdh-config-job-config
+        volumeMounts:
+        - name: ansible
+          mountPath: /tmp/ansible
+          readOnly: true
+      volumes:
+      - name: ansible
+        configMap:
+          name: rhdh-config-job-playbook
+          items:
+          - key: playbook.yaml
+            path: playbook.yaml
 
