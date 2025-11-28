@@ -290,6 +290,7 @@ data:
             replace: '{{ "{{" }} domain_name {{ "}}" }}'
             backup: no
           loop:
+            - "{{ "{{" }} repo_local_path {{ "}}" }}/scaffolder-templates/opencodequest-templates.yaml
             - "{{ "{{" }} repo_local_path {{ "}}" }}/scaffolder-templates/fight-ui/template.yaml"
             - "{{ "{{" }} repo_local_path {{ "}}" }}/scaffolder-templates/quarkus-ai/template.yaml"
             - "{{ "{{" }} repo_local_path {{ "}}" }}/scaffolder-templates/quarkus-postgresql/template.yaml"
