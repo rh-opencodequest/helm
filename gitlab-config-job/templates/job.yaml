@@ -28,10 +28,6 @@ spec:
             # Change to the ansible directory
             cd /tmp/ansible
             
-            # Create vars directory and move vars file
-            mkdir -p vars
-            mv opencodequest.yaml vars/opencodequest.yaml
-            
             # Run the ansible playbook
             echo "Running ansible playbook for cluster: ${CLUSTER}"
             ansible-playbook -i localhost playbook.yaml \
@@ -50,3 +46,8 @@ spec:
       - name: ansible
         configMap:
           name: gitlab-config-job-playbook
+          items:
+          - key: opencodequest.yaml
+            path: vars/opencodequest.yaml
+          - key: playbook.yaml
+            path: playbook.yaml
