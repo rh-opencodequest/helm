@@ -35,7 +35,7 @@ spec:
             
             # Run the ansible playbook
             echo "Running ansible playbook for ACS configuration"
-            ansible-playbook -i localhost playbook-configure-acs.yaml
+            ansible-playbook -i localhost playbook.yaml
             
             echo "ACS configuration completed successfully"
         envFrom:
