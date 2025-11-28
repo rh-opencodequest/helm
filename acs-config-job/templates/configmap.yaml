@@ -35,8 +35,8 @@ data:
           delay: 5
 
         - set_fact:
-            central_hostname: '{{ central_route.resources[0].spec.host }}:443'
-            acs_api: 'https://{{ central_hostname }}/v1'
+            central_hostname: '{{ "{{" }} central_route.resources[0].spec.host {{ "}}" }}:443'
+            acs_api: 'https://{{ "{{" }} central_hostname {{ "}}" }}/v1'
 
         - name: Get Stackrox central's admin password
           kubernetes.core.k8s_info:
@@ -51,31 +51,31 @@ data:
           delay: 5
 
         - set_fact:
-            central_admin_password: '{{ admin_secret.resources[0].data.password | b64decode }}'
+            central_admin_password: '{{ "{{" }} admin_secret.resources[0].data.password | b64decode {{ "}}" }}'
 
         - name: Find OpenCodeQuest-CVE-2016-1000031 policy
           uri:
-            url: '{{ acs_api }}/policies?query=name%3AOpenCodeQuest-CVE-2016-1000031'
-            validate_certs: '{{ validate_certs }}'
+            url: '{{ "{{" }} acs_api {{ "}}" }}/policies?query=name%3AOpenCodeQuest-CVE-2016-1000031'
+            validate_certs: '{{ "{{" }} validate_certs {{ "}}" }}'
             url_username: admin
-            url_password: '{{ central_admin_password }}'
+            url_password: '{{ "{{" }} central_admin_password {{ "}}" }}'
             force_basic_auth: yes
           register: find_policies_response
           changed_when: false
 
         - set_fact:
-            policy_id: '{{ (find_policies_response.json.policies | selectattr("name", "equalto", "OpenCodeQuest-CVE-2016-1000031") | first).id }}'
+            policy_id: '{{ "{{" }} (find_policies_response.json.policies | selectattr("name", "equalto", "OpenCodeQuest-CVE-2016-1000031") | first).id {{ "}}" }}'
           when: find_policies_response.json.policies | selectattr("name", "equalto", "OpenCodeQuest-CVE-2016-1000031") | list | count > 0
 
         - name: Create the policy
           uri:
-            url: '{{ acs_api }}/policies'
+            url: '{{ "{{" }} acs_api {{ "}}" }}/policies'
             method: POST
             status_code: "200"
-            validate_certs: '{{ validate_certs }}'
+            validate_certs: '{{ "{{" }} validate_certs {{ "}}" }}'
             url_username: admin
-            url_password: '{{ central_admin_password }}'
-            body: '{{ policy }}'
+            url_password: '{{ "{{" }} central_admin_password {{ "}}" }}'
+            body: '{{ "{{" }} policy {{ "}}" }}'
             body_format: json
             force_basic_auth: yes
           register: create_policy_response
@@ -122,7 +122,7 @@ data:
               isDefault: false
 
         - set_fact:
-            policy_id: '{{ create_policy_response.json.id }}'
+            policy_id: '{{ "{{" }} create_policy_response.json.id {{ "}}" }}'
           when: policy_id is not defined
 
         - debug:
