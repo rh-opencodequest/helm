@@ -92,8 +92,8 @@ data:
         # Intentional no displayName for testing
         email: niteow2@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -117,8 +117,8 @@ data:
         # Intentional no displayName for testing
         email: blackp@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -142,8 +142,8 @@ data:
         # Intentional no displayName for testing
         email: moondra@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -167,8 +167,8 @@ data:
         # Intentional no displayName for testing
         email: captainam@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -192,8 +192,8 @@ data:
         # Intentional no displayName for testing
         email: saria@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -217,8 +217,8 @@ data:
         # Intentional no displayName for testing
         email: fi@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -242,8 +242,8 @@ data:
         # Intentional no displayName for testing
         email: rachel@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -267,8 +267,8 @@ data:
         # Intentional no displayName for testing
         email: mercury@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -292,8 +292,8 @@ data:
         # Intentional no displayName for testing
         email: thepun@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -317,8 +317,8 @@ data:
         # Intentional no displayName for testing
         email: bishop@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -342,8 +342,8 @@ data:
         # Intentional no displayName for testing
         email: hogun@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -367,8 +367,8 @@ data:
         # Intentional no displayName for testing
         email: tempera@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -392,8 +392,8 @@ data:
         # Intentional no displayName for testing
         email: humanb@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -417,8 +417,8 @@ data:
         # Intentional no displayName for testing
         email: rh1@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -442,8 +442,8 @@ data:
         # Intentional no displayName for testing
         email: rh2@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
@@ -467,8 +467,8 @@ data:
         # Intentional no displayName for testing
         email: rh3@opentlc.com
         picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
-    parent: rhdh
-    children: []
+      parent: rhdh
+      children: []
     ---
     apiVersion: backstage.io/v1alpha1
     kind: User
